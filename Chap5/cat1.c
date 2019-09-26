@@ -19,12 +19,12 @@ int main( int argc, char *argv[] ){
 
     if( argc < 2 ){
         fprintf( stderr, "arg error\n" );
+        exit(1);
+    }else{
+        for( i=1; i<argc; ++i ){
+            doCat( argv[i] );
+        }
     }
-
-    for( i=1; i<argc; ++i ){
-        doCat( argv[i] );
-    }
-
     return 0;
 }
 
